@@ -1,6 +1,6 @@
 # Ekart
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.1.
+EKart is an e-commerce application where the customers should register (sign-up) themselves with the application to use the application and get the benefits of a registered user. Registered customers can view the available items/products and add them to their cart. Then they can place the order. This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.1.
 
 ## Development server
 
