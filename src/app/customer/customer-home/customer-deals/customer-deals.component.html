@@ -1,0 +1,41 @@
+
+<div class="text-center table-responsive table-border">
+    <h3 class="title">Customer Deals</h3><br>
+<table class="table text-center table table-hover">
+    <thead>
+        <tr>
+            <th style="text-align: center">Image</th>
+            <th style="text-align: center">Product Name</th>
+            <th style="text-align: center">Brand</th>
+            <th style="text-align: center">Price</th>
+            <th style="text-align: center">Discount</th>
+            <th style="text-align: center">Deal discount</th>
+            <th style="text-align: center">Starts at</th>
+            <th style="text-align: center">Ends at</th>
+            <th style="text-align: center">Label</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let deal of data">
+            <td>    <img [src]="'assets/resources/'+ deal.productDTO.productId+'.jpg'" width="70" height="50" class="img-responsive center-block"
+              alt="Image Not Found" onError="this.src='assets/resources/404.png'">  </td>                                         
+            <td>{{deal.productDTO.name}}</td>
+            <td>{{deal.productDTO.brand}}</td>
+              <!-- <td>{{deal.product.dealId}}</td> -->
+            <td>{{deal.productDTO.price}}</td>
+            <td>{{deal.productDTO.discount}}</td>
+            <td>{{deal.dealDiscount}}</td>
+            <td>{{deal.dealStartsAt[2]+"-"+deal.dealStartsAt[1]+"-"+deal.dealStartsAt[0]+","+deal.dealStartsAt[3]+":"+deal.dealStartsAt[4]+" "}}</td>
+            <td>{{deal.dealEndsAt[2]+"-"+deal.dealEndsAt[1]+"-"+deal.dealEndsAt[0]+","+deal.dealEndsAt[3]+":"+deal.dealEndsAt[4]+" "}}</td>
+            <!-- <td>{{getDate(deal.dealStartsAt)| date:'dd-MM-yyyy HH:mm'</td> -->
+             <!-- <td>{{getDate(deal.dealEndsAt)| date:'dd-MM-yyyy HH:mm'</td> -->
+            <td>{{label(deal)}}</td>
+            <!-- <td>{{curMonth}}</td> -->
+
+         </tr>
+    </tbody>
+    </table>
+</div> 
+
+
